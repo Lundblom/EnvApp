@@ -43,7 +43,11 @@ public class MainActivity extends Activity implements CameraFragmentListener {
 			    @Override
 			    public void onClick(View v)
 			    {
+			    	/*
+			    	 * Placeholder function that simulates a working scanner.
+			    	 */
 			    	switch(scanIndex) {
+			    	
 			    	
 			    	case 0:
 			    		entries.add(new ListEntry("Samsung","Samsung Galaxy S3", 42, decodeSampledBitmapFromResource(getResources(), R.drawable.s3, 200, 200)));
