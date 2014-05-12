@@ -1,16 +1,74 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+    
 
-    <TextView
-        android:layout_width="wrap_content"
+    <fragment
+        android:id="@+id/camera_fragment"
+        android:name="com.example.envapp.CameraFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+     <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="35dip"
+    android:gravity="top"
+    android:paddingLeft="5dip"
+    android:background="#323331">
+    
+         <View
+             android:layout_width="0dp"
+            android:layout_height="0dp" 
+             android:layout_weight="1"/>
+ 
+    <ImageView
+        android:id="@+id/shoppingCart"
+        android:layout_width="38dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.10"
+        android:src="@drawable/shopping_cart"
+        android:onClick="shopCart" />
+ 
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:orientation="vertical"
+        android:layout_marginTop="35dip" >
 
-</RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/scan_prompt"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.5" >
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom"
+                android:scrollbarStyle="insideInset"
+                android:overScrollMode="never" >
+            </ListView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</merge>
