@@ -45,6 +45,7 @@ public class MainActivity extends Activity implements CameraFragmentListener {
 			    {
 			    	/*
 			    	 * Placeholder function that simulates a working scanner.
+					 * Please gibe library
 			    	 */
 			    	switch(scanIndex) {
 			    	
